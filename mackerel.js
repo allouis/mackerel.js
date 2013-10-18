@@ -5,6 +5,9 @@ var Mackerel = (function(win, undefined){
     },
     canFly: function(){
       return false;
+    },
+    isSmoked: function(){
+      return !!document.querySelector("tr");
     }
   };
   
