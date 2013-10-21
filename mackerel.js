@@ -2,6 +2,7 @@ var Mackerel = (function(win, undefined){
   // Private properties
   var health = 100;
   var poisioned = false;
+  var ego = 50;
   var eats = ["Small finfish", "Squid", "Pelagic Crustaceans", "Base"];
   // Private functions
   function reduceHealth(dmg){
