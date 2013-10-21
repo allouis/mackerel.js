@@ -21,6 +21,14 @@ var Mackerel = (function(win, undefined){
     isSmoked: function(){
       return !!document.querySelector("tr");
     },
+    feed: function(food){
+      if(this.food instanceof Poison){
+          this.givePoison();
+      }
+      if(this.food instanceof Antidote){
+        this.giveAntidote();
+      }
+    },
     givePoison: function(){
       poisioned = true;
       inflictPoison();
