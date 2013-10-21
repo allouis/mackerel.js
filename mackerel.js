@@ -20,6 +20,9 @@ var Mackerel = (function(win, undefined){
     },
     isSmoked: function(){
       return !!document.querySelector("tr");
+    },
+    getHealth: function(){
+      return health;
     }
   };
   
