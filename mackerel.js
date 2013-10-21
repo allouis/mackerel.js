@@ -16,7 +16,7 @@ var Mackerel = (function(win, undefined){
   }
   function inflictPoison(){
     if(poisioned) setTimeout(inflictPoison, 500); 
-    reduceHealth(1);
+    modifyHealth(-1);
   }
   // Public properties and methods
   var Mackerel = {
@@ -28,6 +28,10 @@ var Mackerel = (function(win, undefined){
     },
     isSmoked: function(){
       return !!document.querySelector("tr");
+    },
+    isTasty: function(){
+      if(this.isSmoked()) modifyEgo(5);
+      return true;
     },
     feed: function(food){
       if(this.food instanceof Poison){
