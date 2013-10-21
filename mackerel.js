@@ -2,6 +2,7 @@ var Mackerel = (function(win, undefined){
   // Private properties
   var health = 100;
   var poisioned = false;
+  var eats = ["Small finfish", "Squid", "Pelagic Crustaceans", "Base"];
   // Private functions
   function reduceHealth(dmg){
     health -= dmg;
@@ -34,10 +35,21 @@ var Mackerel = (function(win, undefined){
       inflictPoison();
     },
     giveAntidote: function(){
-        poisioned = false;   
+      poisioned = false;   
     },
     getHealth: function(){
       return health;
+    },
+    canSwim: function(){
+      return true;
+    },
+    canBreathe: function(parameters) {
+      if(parameters.isUnderWater) return true;
+      return false;
+    }
+    eat: function(parameters) {
+      if(eats.indexOf(parameters)!=-1) return "Mackerel ate "+parameters;
+      return "Mackeral does not eat "+parameters;
     }
   };
   
