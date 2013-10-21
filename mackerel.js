@@ -8,6 +8,10 @@ var Mackerel = (function(win, undefined){
     },
     canSwim: function(){
       return true;
+    },
+    canBreathe: function(parameters) {
+      if(parameters.isUnderWater) return true;
+      return false;
     }
   };
   
