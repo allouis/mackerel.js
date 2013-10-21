@@ -5,8 +5,14 @@ var Mackerel = (function(win, undefined){
   var ego = 50;
   var eats = ["Small finfish", "Squid", "Pelagic Crustaceans", "Base"];
   // Private functions
-  function reduceHealth(dmg){
-    health -= dmg;
+  function modifyHealth(amount){
+    health = modifyStat(health, amount);
+  }
+  function modifyEgo(amout){
+    ego = modifyStat(ego, amount);
+  }
+  function modifyStat(stat, num){
+    return Math.max(Math.min(100, stat + num), 0);
   }
   function inflictPoison(){
     if(poisioned) setTimeout(inflictPoison, 500); 
