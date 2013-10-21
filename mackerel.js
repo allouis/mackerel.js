@@ -5,6 +5,9 @@ var Mackerel = (function(win, undefined){
     },
     canFly: function(){
       return false;
+    },
+    canSwim: function(){
+      return true;
     }
   };
   
