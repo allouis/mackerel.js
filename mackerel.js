@@ -46,7 +46,7 @@ var Mackerel = (function(win, undefined){
     canBreathe: function(parameters) {
       if(parameters.isUnderWater) return true;
       return false;
-    }
+    },
     eat: function(parameters) {
       if(eats.indexOf(parameters)!=-1) return "Mackerel ate "+parameters;
       return "Mackeral does not eat "+parameters;
