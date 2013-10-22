@@ -3,7 +3,7 @@ var Mackerel = (function(win, undefined){
   var health = 100;
   var poisioned = false;
   var ego = 50;
-  var eats = ["Small finfish", "Squid", "Pelagic Crustaceans", "Base"];
+  var eats = ["Small finfish", "Squid", "Pelagic Crustaceans", "Base", "Zooplankton", "Copepods", "Shrimp"];
   // Private functions
   function modifyHealth(amount){
     health = modifyStat(health, amount);
@@ -62,7 +62,10 @@ var Mackerel = (function(win, undefined){
       if(eats.indexOf(parameters)!=-1){
         modifyHealth(5);
         return "Mackerel ate "+parameters}
-      return "Mackeral does not eat "+parameters;
+      return "Mackerel does not eat "+parameters;
+    },
+    layEggs: function() {
+      return "Mackerel layed "+Math.floor(Math.random()*(1500000))+" eggs";
     }
   };
   
