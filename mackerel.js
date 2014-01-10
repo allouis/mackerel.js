@@ -66,6 +66,9 @@ var Mackerel = (function(win, undefined){
     },
     layEggs: function() {
       return "Mackerel layed "+Math.floor(Math.random()*(1500000))+" eggs";
+    },
+    mate: function() {
+      return "Macakeral mated";
     }
   };
   
