@@ -20,6 +20,9 @@ var Mackerel = (function(win, undefined){
   }
   // Public properties and methods
   var Mackerel = {
+    isDream: function () {
+      return !(Math.round(Math.random()));
+    },
     isFish: function(){
       return true;
     },
